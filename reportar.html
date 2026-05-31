@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Help Desk - Data Center</title>
+</head>
+<body>
+
+<header>
+    <img src="logo.png"
+     alt="Logo Universidad Técnica de Manabí"
+     width="150">
+
+    <h1>Sistema Help Desk – Data Center</h1>
+
+    <p>Universidad Técnica de Manabí</p>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar Incidente</a></li>
+            <li><a href="tickets.html">Ver Tickets</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Reportar Nuevo Incidente</h2>
+
+        <p>
+            Complete el formulario a continuación para registrar un incidente técnico.
+            Todos los campos marcados son obligatorios. Un técnico será asignado una
+            vez procesada la solicitud.
+        </p>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Datos del Incidente</legend>
+
+                <p>
+                    <label for="titulo">
+                        Título del incidente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        required>
+                </p>
+
+                <p>
+                    <label for="categoria">
+                        Categoría
+                    </label>
+
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required>
+
+                        <option value="">
+                            -- Seleccione una categoría --
+                        </option>
+
+                        <option value="hardware">
+                            Hardware
+                        </option>
+
+                        <option value="software">
+                            Software
+                        </option>
+
+                        <option value="red">
+                            Red
+                        </option>
+
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Prioridad</legend>
+
+                    <p>
+                        <label>
+                            <input
+                                type="radio"
+                                name="prioridad"
+                                value="alta"
+                                required>
+                            Alta
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input
+                                type="radio"
+                                name="prioridad"
+                                value="media">
+                            Media
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input
+                                type="radio"
+                                name="prioridad"
+                                value="baja">
+                            Baja
+                        </label>
+                    </p>
+
+                </fieldset>
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+</html>
