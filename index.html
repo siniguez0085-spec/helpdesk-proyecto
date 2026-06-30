@@ -1,74 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI Kit Help Desk</title>
+    <title>Help Desk UI Kit</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1>Design System - Help Desk</h1>
+    <!-- ENCABEZADO -->
+    <header class="header">
 
-    <section>
-        <h2>Botones</h2>
+          <img src="logo.png" 
+          alt="Logo del Sistema Help Desk"
+          width="150">
+          
+          <h1>Help Desk UI Kit</h1>
 
-        <button class="btn btn-primary">
-            Botón Primario
-        </button>
+        <p>Biblioteca de Componentes para el Sistema Help Desk</p>
 
-        <button class="btn btn-secondary">
-            Botón Secundario
-        </button>
+    </header>
 
-        <button class="btn btn-danger">
-            Botón Peligro
-        </button>
-    </section>
+    <main class="contenedor">
 
-    <section>
-        <h2>Formulario</h2>
+        <!-- BOTONES -->
+        <section class="seccion">
 
-        <input type="text" placeholder="Ingrese nombre">
+            <h2>Botones</h2>
 
-        <select>
-            <option>Seleccione una opción</option>
-            <option>Hardware</option>
-            <option>Software</option>
-            <option>Redes</option>
-        </select>
-    </section>
+            <button class="btn btn-primario">
+                Guardar
+            </button>
 
-    <section>
-        <h2>Tarjeta de Ticket</h2>
+            <button class="btn btn-secundario">
+                Editar
+            </button>
 
-        <div class="card">
-            <h3>Error de Impresora</h3>
+            <button class="btn btn-peligro">
+                Eliminar
+            </button>
 
-            <p>
-                La impresora no responde al momento de imprimir.
-            </p>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Prioridades</h2>
+        <!-- FORMULARIOS -->
+        <section class="seccion">
 
-        <span class="badge alta">
-            Alta
-        </span>
+            <h2>Formulario</h2>
 
-        <span class="badge media">
-            Media
-        </span>
+            <div class="formulario">
 
-        <span class="badge baja">
-            Baja
-        </span>
+                <label>Nombre del Usuario</label>
 
-    </section>
+                <input type="text" placeholder="Ingrese su nombre">
+
+                <label>Categoría</label>
+
+                <select>
+
+                    <option>Seleccione una categoría</option>
+
+                    <option>Hardware</option>
+
+                    <option>Software</option>
+
+                    <option>Redes</option>
+
+                    <option>Impresoras</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- TARJETAS -->
+        <section class="seccion">
+
+            <h2>Tarjetas</h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Ticket #001</h3>
+
+                    <p>La computadora no tiene acceso a Internet.</p>
+
+                    <span class="badge alta">
+                        Alta
+                    </span>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Ticket #002</h3>
+
+                    <p>Error al iniciar el sistema operativo.</p>
+
+                    <span class="badge media">
+                        Media
+                    </span>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Ticket #003</h3>
+
+                    <p>Solicitud de instalación de Office.</p>
+
+                    <span class="badge baja">
+                        Baja
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BADGES -->
+        <section class="seccion">
+
+            <h2>Prioridades</h2>
+
+            <span class="badge alta">Alta</span>
+
+            <span class="badge media">Media</span>
+
+            <span class="badge baja">Baja</span>
+
+        </section>
+
+        <!-- ALERTAS -->
+        <section class="seccion">
+
+            <h2>Alertas</h2>
+
+            <div class="alerta exito">
+                ✔ Ticket registrado correctamente.
+            </div>
+
+            <div class="alerta advertencia">
+                ⚠ Revise los datos ingresados.
+            </div>
+
+            <div class="alerta error">
+                ✖ Error al guardar la información.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>
+            Universidad Técnica de Manabí | Desarrollo de Sistemas Informáticos
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
