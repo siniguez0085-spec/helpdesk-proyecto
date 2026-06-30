@@ -1,0 +1,373 @@
+/* =========================
+   DESIGN SYSTEM - HELP DESK UI KIT
+   PARTE 1: VARIABLES Y BASE
+========================= */
+
+/* VARIABLES CSS */
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+    --danger: #ef4444;
+    --success: #22c55e;
+    --warning: #f59e0b;
+
+    --bg: #f1f5f9;
+    --white: #ffffff;
+    --text: #1e293b;
+
+    --shadow: 0 10px 25px rgba(0,0,0,0.1);
+    --radius: 12px;
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TIPOGRAFÍA */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* TÍTULOS */
+.titulo {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary);
+    padding-left: 10px;
+}
+
+/* CENTRAR COMPONENTES */
+.componentes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+/* =========================
+   PARTE 2: NAVBAR
+========================= */
+
+.navbar {
+    background: var(--white);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--primary);
+}
+
+/* =========================
+   PARTE 2: HERO
+========================= */
+
+.hero {
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary), #1e40af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    max-width: 600px;
+    opacity: 0.9;
+}
+/* =========================
+   PARTE 3: BOTONES
+========================= */
+
+.btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+/* BOTÓN PRIMARIO */
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+/* BOTÓN PELIGRO */
+.btn-danger {
+    background: var(--danger);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+/* EFECTO CLICK */
+.btn:active {
+    transform: scale(0.97);
+}
+/* =========================
+   PARTE 4: FORMULARIOS
+========================= */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* INPUTS */
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius);
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+    background: #fff;
+}
+
+/* FOCUS (cuando haces click) */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* SELECT */
+select {
+    cursor: pointer;
+}
+
+/* HOVER SUAVE */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--secondary);
+}
+/* =========================
+   PARTE 5: CARDS
+========================= */
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    max-width: 400px;
+}
+
+/* EFECTO HOVER */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO DE LA CARD */
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+/* TEXTO */
+.card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+/* CONTENEDOR SI QUIERES VARIAS CARDS */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* =========================
+   PARTE 6: BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+/* PRIORIDAD ALTA */
+.badge.alta {
+    background: var(--danger);
+}
+
+/* PRIORIDAD MEDIA */
+.badge.media {
+    background: var(--warning);
+    color: #1e293b;
+}
+
+/* PRIORIDAD BAJA */
+.badge.baja {
+    background: var(--success);
+}
+
+/* EFECTO SUAVE */
+.badge:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/* =========================
+   PARTE 7: FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+    background: var(--text);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* =========================
+   ANIMACIONES GLOBALES
+========================= */
+
+button, .card, .badge {
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .componentes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+.hero {
+    height: 350px;
+    background: linear-gradient(135deg, var(--primary), #1e40af);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+/* IMAGEN */
+.hero-img {
+    width: 150px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
